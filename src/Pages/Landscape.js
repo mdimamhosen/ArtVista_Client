@@ -53,6 +53,7 @@ const Landscape = () => {
                 <h2 className="text-base lg:text-lg text-center">
                   {product.item_name}
                 </h2>
+
                 <div className="flex justify-center items-center w-full flex-col">
                   <p>
                     <span className="text-yellow-500">
@@ -69,6 +70,17 @@ const Landscape = () => {
                   <p className="text-sm md:text-base font-semibold">
                     Price: ${product.price}
                   </p>
+                  <div className="flex flex-col-reverse   items-center justify-center w-full gap-1">
+                    <h2 className="text-sm   text-center">
+                      {product.subcategory_Name}
+                    </h2>
+                    <h2 className="text-sm  text-center">
+                      {product.processing_time}
+                    </h2>
+                  </div>
+                  <h2 className="text-sm  text-center">
+                    {product.short_description.slice(0, 50)}...
+                  </h2>
                   <div className="flex items-center space-x-2">
                     <NavLink
                       to={`/allcateroy/${product._id}`}
