@@ -81,6 +81,9 @@ const UpdatePage = () => {
       user_name: user?.displayName || "",
     });
   }, [art, user]);
+  React.useEffect(() => {
+    document.title = "Update Item || ArtVIsta";
+  });
   return (
     <div>
       <div className="mx-auto border border-amber-400 lg:w-1/2 w-11/12  p-6  rounded-lg py-5 my-5 shadow-md">
