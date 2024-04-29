@@ -44,7 +44,9 @@ const MyProfile = () => {
       });
     });
   };
-
+  React.useEffect(() => {
+    document.title = "My Profile || ArtVIsta";
+  });
   const { reloadUserInfo } = user;
   const userEmail = reloadUserInfo.email;
   const userDisplayName = reloadUserInfo?.displayName;
