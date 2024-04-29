@@ -18,6 +18,9 @@ const Landscape = () => {
         setloading(false);
       });
   }, []);
+  React.useEffect(() => {
+    document.title = "Charcol Sketch Item || ArtVIsta";
+  });
   return (
     <div className="font-mono mt-5">
       {loading && (
