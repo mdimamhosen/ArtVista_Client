@@ -21,7 +21,7 @@ const Landscape = () => {
       });
   }, []);
   React.useEffect(() => {
-    document.title = "Charcol Sketch Item || ArtVIsta";
+    document.title = "Cartoon Drawing Item || ArtVIsta";
   });
 
   return (
