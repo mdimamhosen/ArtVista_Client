@@ -50,7 +50,7 @@ export default function Navbar() {
   const handleSignOut = () => {
     logout();
     navigate("/");
-    toast.success("Logged out successfully");
+    toast.success("Logged out successfully!");
   };
 
   return (
