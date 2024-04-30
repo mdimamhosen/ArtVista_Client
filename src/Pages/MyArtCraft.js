@@ -48,6 +48,7 @@ const AllArtCraft = () => {
               (product) => product._id !== id
             );
             setSixProducts(newProducts);
+            setLoading(false);
           });
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
       }
@@ -71,6 +72,7 @@ const AllArtCraft = () => {
         .then((res) => res.json())
         .then((data) => {
           setSixProducts(data);
+          setLoading(false);
         });
       return;
     }

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../ContextProvider/AppContext";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-
+import { toast } from "react-toastify";
 const UpdatePage = () => {
   const { user } = useContext(AppContext);
   const [formData, setFormData] = useState({
@@ -39,7 +39,7 @@ const UpdatePage = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        toast.success("Item Updated Successfully");
         setFormData({
           image: "",
           item_name: "",
@@ -59,7 +59,7 @@ const UpdatePage = () => {
   };
   const [art, setArt] = useState({});
   const { id } = useParams();
-  console.log(art);
+
   useEffect(() => {
     fetch(`http://localhost:3001/art/${id}`)
       .then((res) => res.json())
