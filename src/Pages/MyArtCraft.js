@@ -91,18 +91,6 @@ const AllArtCraft = () => {
 
   return (
     <div className="font-mono mt-5">
-      {loading && (
-        <>
-          <div className="w-screen h-screen flex justify-center items-center ">
-            <InfinitySpin
-              visible={true}
-              width="200"
-              color="#FFBF00"
-              ariaLabel="infinity-spin-loading"
-            />
-          </div>
-        </>
-      )}
       <h1 className="text-center my-4 text-lg md:text-xl lg:text-3xl font-bold capitalize">
         My <span className="text-amber-700 ">Art&Craft</span> Items
       </h1>
@@ -132,7 +120,18 @@ const AllArtCraft = () => {
           </select>
         </div>
       </div>
-
+      {loading && (
+        <>
+          <div className="w-screen h-screen flex justify-center items-center ">
+            <InfinitySpin
+              visible={true}
+              width="200"
+              color="#FFBF00"
+              ariaLabel="infinity-spin-loading"
+            />
+          </div>
+        </>
+      )}
       <Slide>
         <div className="grid py-5  container  mx-auto px-2  grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 lg:gap-4">
           {sixProducts.map((product, index) => (
