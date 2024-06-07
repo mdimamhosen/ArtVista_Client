@@ -19,7 +19,7 @@ const AllArtCraft = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/mydata?email=${email}`)
+    fetch(`https://art-rho-flax.vercel.app/mydata?email=${email}`)
       .then((res) => res.json())
       .then((data) => {
         setSixProducts(data);

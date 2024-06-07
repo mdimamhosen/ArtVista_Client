@@ -43,8 +43,8 @@ const LogIn = () => {
       });
   };
   const from = location?.state || "/";
-  const handleSocialLogin = (socialProvider) => {
-    socialProvider()
+  const handleGoogleLogin = (googleProvider) => {
+    googleProvider()
       .then(() => {
         toast.success(`Signed in successfully`);
         navigate(from);
